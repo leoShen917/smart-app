@@ -1,0 +1,221 @@
+* {
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    content: "";
+    position: absolute;
+}
+
+.main-content {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.main-content .item {
+    display: grid;
+    grid-template-rows: 1fr min-content;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    flex-wrap: wrap;
+    background: var(--bg-color);
+}
+
+.main-content .item:not(.footer) {
+    padding-top: 1rem;
+}
+
+.picture .item.button-pulse {
+    width: 20%;
+    position: absolute;
+    top: 85%;
+    left: calc(50% - 60px);
+}
+
+/* .select .item.button-pulse {
+    height:10%;
+    width: 30%;
+    position: absolute;
+    top: 52%;
+    left:50%;
+    transform:translate(-50%)
+} */
+#camerabut  {
+    height:12%;
+    width: 25%;
+    position: absolute;
+    float:left;
+    top: 57%;
+    right:57%;
+    /* transform:translate(-50%) */
+}
+
+#photolibrarybut {
+    height:12%;
+    width: 25%;
+    position: absolute;
+    float:left;
+    top: 57%;
+    right:17%;
+    /* transform:translate(-50%) */
+}
+
+.select button {
+    cursor: pointer;
+    background-color: rgb(76, 76, 80) !important;
+    color: rgb(249, 248, 252);
+    border: 2px solid rgb(76, 76, 80);
+    border-radius: 30px;
+    padding: 0.3rem 0.8rem;
+    font: 12px "Margarine", sans-serif;
+    outline: none;
+    position: relative;
+    transition: 0.2s ease-in-out;
+    letter-spacing: 2px;
+}
+
+
+.picture button {
+    background-color: rgb(76, 76, 80) !important;
+    color: rgb(249, 248, 252);
+    border: 2px solid rgb(76, 76, 80);
+    border-radius: 30px;
+    padding: 0.5rem 1.2rem;
+    font: 14px "Margarine", sans-serif;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    transition: 0.2s ease-in-out;
+    letter-spacing: 2px;
+}
+
+.name {
+    width: 100%;
+    text-align: center;
+    padding: 0 0 3rem;
+    font: 500 14px 'Rubik', sans-serif;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+
+.select .item.button-pulse .button__wrapper {
+    display: inline-block;
+    position: relative;
+    width:100%;
+    height:75%;
+    /* width: 120px;
+    height: 39px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.picture .item.button-pulse .button__wrapper {
+    display: inline-block;
+    position: relative;
+    width: 120px;
+    height: 39px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-pulse button {
+    background: var(--bg-color);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.button-pulse .button__wrapper:hover .pulsing:before {
+    animation: pulsing 0.2s linear infinite;
+}
+
+.button-pulse .button__wrapper:hover .pulsing:after {
+    animation: pulsing1 0.2s linear infinite;
+}
+
+.pulsing {
+    width: 99%;
+    height: 99%;
+    border-radius: 50px;
+    z-index: 1;
+    position: relative;
+}
+
+.pulsing:before,
+.pulsing:after {
+    width: 100%;
+    height: 100%;
+    border: inherit;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background: rgb(171, 175, 177);
+    border-radius: inherit;
+    animation: pulsing 2.5s linear infinite;
+}
+
+.pulsing:after {
+    animation: pulsing1 2.5s linear infinite;
+}
+
+@keyframes pulsing {
+    0% {
+        opacity: 1;
+        transform: scaleY(1) scaleX(1);
+    }
+
+    20% {
+        opacity: 0.5;
+    }
+
+    70% {
+        opacity: 0.2;
+        transform: scaleY(1.8) scaleX(1.4);
+    }
+
+    80% {
+        opacity: 0;
+        transform: scaleY(1.8) scaleX(1.4);
+    }
+
+    90% {
+        opacity: 0;
+        transform: scaleY(1) scaleX(1);
+    }
+}
+
+@keyframes pulsing1 {
+    0% {
+        opacity: 1;
+        transform: scaleY(1) scaleX(1);
+    }
+
+    20% {
+        opacity: 0.5;
+    }
+
+    70% {
+        opacity: 0.2;
+        transform: scaleY(1.3) scaleX(1.15);
+    }
+
+    80% {
+        opacity: 0;
+        transform: scaleY(1.3) scaleX(1.15);
+    }
+
+    90% {
+        opacity: 0;
+        transform: scaleY(1) scaleX(1);
+    }
+}

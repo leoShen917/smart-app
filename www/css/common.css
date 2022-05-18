@@ -1,0 +1,63 @@
+ div,
+ a,
+ img {
+     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+     outline: none;
+ }
+
+ html {
+     height: 100%
+ }
+
+ body {
+     height: 100%;
+     margin: 0px;
+     padding: 0px;
+     /* position: relative;; */
+ }
+
+ .top {
+    height: 10%;
+    text-align: center;
+    background: #eeecec;
+    border-bottom: 1px solid rgb(226, 226, 226)
+}
+.top b{
+    font-size: 20px;
+    line-height: 80px;
+}
+ .bottom {
+     height: 10%;
+     width: 100%;
+     /* position:absolute; */
+     margin-bottom: 0;
+     background: #eeecec;
+     border-top:1px solid rgb(241, 241, 241)
+ }
+
+ .container{
+     height:50%;
+     width:100%;
+     margin-top: 10%;
+     transform: translate(0,-50%);
+ }
+ .camera,
+ .home,
+ .history {
+     float: left;
+     margin-left: 18%;
+     height: 100%;
+     width: 12%;
+     background: #eeecec;
+ }
+
+ .bottom .camera a img,
+ .bottom .home a img,
+ .bottom .history a img {
+     height: 25px;
+ }
+
+ .center {
+     text-align: center;
+     margin-top: 10px;
+ }

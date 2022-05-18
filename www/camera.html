@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<haed>
+    <link rel="stylesheet" href="css/selectpage.css" type="text/css">
+    <link rel="stylesheet" href="css/common.css" type="text/css">
+    <link rel="stylesheet" href="css/camera.css" type="text/css">
+    <link rel="stylesheet" href="css/button.css" type="text/css">
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/selectpage.js"></script>
+    <script type="text/javascript" src="js/camera.js"> </script>
+    <script type="text/javascript" src="js/build_xml.js"> </script>
+    <!-- <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=G2mGBB7vB0585R4MS574tePqgkYI1kHv">
+    </script> -->
+    <script type="text/javascript" src="js/bmap.js"> </script>
+</haed>
+
+<body>
+    <div class='show'>
+        <ul>
+            <li><img src="img/agriculture_1.jpg" alt=""></li>
+            <li><img src="img/agriculture_2.jpg" alt=""></li>
+            <li><img src="img/agriculture_3.jpg" alt=""></li>
+            <li><img src="img/agriculture_1.jpg" alt=""></li>
+        </ul>
+    </div>
+    <div class='select'>
+        <div class='crop_img'>
+            <img src="img/corn.png">
+            <img src="img/wheat.png">
+            <img src="img/rice.png">
+            <img src="img/cotton.png">
+        </div>
+        <div class='crop'>作物：<input type="text" id="selectCrop"></div>
+        <div class='pattern'>模式：<input type="text" id="selectPattern"></div>
+        <div class="item button-pulse" id="camerabut" style="--bg-color: #e67e22;">
+            <div class="button__wrapper">
+                <div class="pulsing"></div>
+                <button onclick="createXml('camera')">开始拍照</button>
+            </div>
+        </div>
+        <div class="item button-pulse" id='photolibrarybut' style="--bg-color: #e67e22;">
+            <div class="button__wrapper">
+                <div class="pulsing"></div>
+                <button onclick="createXml('photolibrary')">本地相册</button>
+            </div>
+        </div>
+        <div class='info'>
+            <p>模式说明：</p>
+            <p class='item'>生产量预估：</p>
+            <p class='description'>区域内农作物产量估计</p>
+            <p class='item'>品种鉴别　：</p>
+            <p class='description'>农作物品种识别，如先玉335</p>
+            <p class='item'>密度值检测：</p>
+            <p class='description'>农作物的存活率检测</p>
+            <p class='item'>覆盖度检测：</p>
+            <p class='description'>农作物营养状况检测</p>
+            <p class='item'>病虫害检测：</p>
+            <p class='description'>农作物病虫害检测，如玉米锈病</p>
+        </div>
+    </div>
+    <div class='bottom'>
+        <div class='container'>
+            <div class='camera'><a href='#'><img id='camera' src='img/camera2_en.png'></a></div>
+            <div class='home'><a href='home.html'><img id='home' src='img/home_no.png'></a></div>
+            <div class='history'><a href='history.html'><img id='history' src='img/history_no.png'></a></div>
+        </div>
+    </div>
+</body>
+
+</html>

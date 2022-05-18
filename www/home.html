@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <script type="text/javascript" src="cordova.js"></script>
+    <!-- <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=G2mGBB7vB0585R4MS574tePqgkYI1kHv">
+    </script> -->
+    <!-- <script type="text/javascript"
+        src="https://api.map.baidu.com/getscript?v=3.0&ak=G2mGBB7vB0585R4MS574tePqgkYI1kHv&services=&t="></script> -->
+    <script src="js/bmap.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <Script Language="JavaScript" src="js\home.js"></Script>
+    <Script Language="JavaScript" src="js\menu.js"></Script>
+    <Script Language="JavaScript" src="js\build_xml.js"></Script>
+    <link href="css/menu.css" rel="stylesheet">
+    <link href="css/bmap.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+    <style type='text/css'>
+        #allmap {
+            height: 90%
+        }
+    </style>
+</head>
+
+<body onload="showmap()">
+    <div id='allmap'></div>
+    <div class='bottom'>
+        <div class='container'>
+            <div class='camera'><a href='camera.html'><img id='camera' src='img/camera2.png'></a></div>
+            <div class='home'><a href='#'><img id='home' src='img/home.png'></a></div>
+            <div class='history'><a href='history.html'><img id='history' src='img/history_no.png'></a></div>
+        </div>
+    </div>
+    <!-- <div class="menu-modal">
+        <div class="menu-bg"></div>
+        <div class="menu">
+            <div class="center">
+                <img src="img\user.png" />
+                <p>User</p>
+            </div>
+
+            <ul>
+                <li><a href="javascript:;"><span>个人模式</span></a></li>
+                <li><a href="javascript:;"><span>联机模式</span></a></li>
+                <li><a href="javascript:;"><span>拍照识病</span></a></li>
+                <li><a href="javascript:;"><span>密度值检测</span></a></li>
+            </ul>
+        </div>
+    </div> -->
+
+</body>
+
+</html>
+<script type="text/javascript">
+    var map;
+    //生成实例
+    /* var _right = new mSlider({
+        dom: $(".menu-modal"),
+        direction: "left"
+    }); */
+</script>

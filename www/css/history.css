@@ -1,0 +1,15 @@
+.show{
+    overflow:auto;
+    height: 80%;
+    position: relative
+}
+
+.day{
+    height:auto;
+    width:100%
+}
+.pictures{
+    height:130px;
+    margin-left:5px;
+    margin-bottom:10px;
+}

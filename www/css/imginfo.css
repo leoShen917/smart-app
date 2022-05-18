@@ -1,0 +1,28 @@
+.show{
+    height:80%;
+    overflow:auto;
+}
+.picture{
+    height:40%;
+    text-align: center;
+}
+
+.pictures{
+    height:100%;
+    margin-top: 5%;
+}
+
+.info{
+    margin-top: 10%;
+    float:left;
+}
+.info .info_name{
+    margin-top:5%;
+    clear:both;
+    float:left
+}
+.info .info_show{
+    margin-top:5%;
+    float:left;
+    color:rgb(0, 68, 255)
+}

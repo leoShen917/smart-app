@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<haed>
+    <link rel="stylesheet" href="css/common.css" type="text/css">
+    <link rel="stylesheet" href="css/button.css" type="text/css">
+    <link rel="stylesheet" href="css/camera_show.css" type="text/css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/selectpage.js"> </script>
+    <script type="text/javascript" src="js/build_xml.js"> </script>
+    <script type="text/javascript" src="js/FileSaver.js"> </script>
+    <script type="text/javascript" src="js/camera_show.js"> </script>
+</haed>
+
+<body onload="setimage_xml()">
+    <div class='top'><b>照片预览</div>
+    <div class='picture'>
+        <p class='info_name' id="name">作物种类：</p>
+        <p class='info_show' id="crop"></p>
+        <p class='info_name'>模式　　：</p>
+        <p class='info_show' id="task"></p>
+        <img src="" alt="" id="myImage" />
+
+        <div class="item button-pulse" style="--bg-color: #e67e22;">
+            <div class="button__wrapper">
+                <div class="pulsing"></div>
+                <button onclick="UpLoad()">确认上传</button>
+            </div>
+        </div>
+        <div class="spinner-box">
+            <div class="pulse-container">
+                <div class="pulse-bubble pulse-bubble-1"></div>
+                <div class="pulse-bubble pulse-bubble-2"></div>
+                <div class="pulse-bubble pulse-bubble-3"></div>
+            </div>
+        </div>
+        <!-- <button onclick="change()">change</button> -->
+    </div>
+    <div class='bottom'>
+        <div class='container'>
+            <div class='camera'><a href='#'><img id='camera' src='img/camera2_en.png'></a></div>
+            <div class='home'><a href='home.html'><img id='home' src='img/home_no.png'></a></div>
+            <div class='history'><a href='history.html'><img id='history' src='img/history_no.png'></a></div>
+        </div>
+    </div>
+</body>
+
+</html>

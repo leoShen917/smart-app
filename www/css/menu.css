@@ -1,0 +1,13 @@
+@charset "utf-8";
+/* 以下实际使用若已初始化可删除 .nav height父级需逐级设置为100%*/
+body,html{height: 100%;background: rgb(167, 167, 167)}
+body,ul{margin:0;padding:0}
+body{font:14px "微软雅黑","宋体","Arial Narrow",HELVETICA;-webkit-text-size-adjust:100%;} 
+li{list-style:none} 
+a{text-decoration:none;}
+/* 以上实际使用若已初始化可删除 */
+
+/* nav */
+.menu{width: 220px;height: 100%;background: #263238;transition: all .3s; position: absolute;top:0;left: 0;}
+.menu a{display: block;overflow: hidden;padding-left: 20px;line-height: 46px;max-height: 46px;color: rgb(16, 17, 17);transition: all .3s;}
+.menu a span{margin-left: 30px;}
