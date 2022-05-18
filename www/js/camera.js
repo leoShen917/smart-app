@@ -3,22 +3,22 @@ var crop_data = [
 
     {
         id: "maize",
-        desc: '玉米'
+        desc: '健身操'
     },
 
     {
         id: 'wheat',
-        desc: '小麦'
+        desc: '跑步'
     },
 
     {
         id: 'rice',
-        desc: '水稻'
+        desc: '羽毛球'
     },
 
     {
         id: 'cotton',
-        desc: '棉花'
+        desc: '举重'
     }
 
 ];
