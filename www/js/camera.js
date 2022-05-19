@@ -17,7 +17,7 @@ var crop_data = [
     },
 
     {
-        id: 'weightlifting',
+        id: 'cotton',
         desc: '举重'
     }
 
@@ -26,12 +26,12 @@ var crop_data_part = [
 
     {
         id: "maize",
-        desc: '健身操'
+        desc: '玉米'
     },
 
     {
         id: 'wheat',
-        desc: '跑步'
+        desc: '小麦'
     }
 
 ];
@@ -90,6 +90,13 @@ var pattern_data_rice = [
         desc: '覆盖度检测'
     }
 ]
+var pattern_data_zero = [
+    {
+        id: "zero",
+        desc: ''
+    }
+]
+
 //input
 $(document).ready(function () {
     $('#selectCrop').selectPage({
@@ -104,13 +111,14 @@ $(document).ready(function () {
         //关闭分页的状态下，列表显示的项目个数，其它的项目以滚动条滚动方式展现（默认10个）
         listSize: 15,
         multiple: false,
+        
         eOpen: function (self) {
             var pattern = document.getElementById('selectPattern').value;
 
             if (pattern == "identification" || pattern == "pest") {
                 $('#selectCrop').selectPageData([{
                     id: "maize",
-                    desc: '健身操'
+                    desc: '玉米'
                 }]);
             }
             else if(pattern == "counting"){
@@ -124,8 +132,10 @@ $(document).ready(function () {
             $('#selectCrop').selectPageData(crop_data);
             $('#selectPattern').selectPageData(pattern_data);
         }
+        
 
     });
+    
     $('#selectPattern').selectPage({
 
         showField: 'desc',
@@ -140,23 +150,29 @@ $(document).ready(function () {
         multiple: false,
         eOpen: function (data) {
             var crop = document.getElementById('selectCrop').value;
-            
-            if(crop == "wheat"){
-                $('#selectPattern').selectPageData(pattern_data_part);
-            }
-            else if(crop=="rice" || crop == "weightlifting"){
-                $('#selectPattern').selectPageData(pattern_data_rice);
+            if(crop==""){
+                alert("请先选择动作");
+                $('#selectPattern').selectPageData(pattern_data_zero);
             }
             else{
-                $('#selectPattern').selectPageData(pattern_data);
+                if(crop == "wheat"){
+                    $('#selectPattern').selectPageData(pattern_data_part);
+                }
+                else if(crop=="rice" || crop == "cotton"){
+                    $('#selectPattern').selectPageData(pattern_data_rice);
+                }
+                else{
+                    $('#selectPattern').selectPageData(pattern_data);
+                }
             }
+            
         },
         eClear: function (data) {
             $('#selectCrop').selectPageData(crop_data);
             $('#selectPattern').selectPageData(pattern_data);
         }
     });
-
+    
     /* $("button").click(function(){
         alert($(this).css("background-color"))
     }) */
@@ -243,3 +259,24 @@ function exchange(centerPointer, callback) {
     new BMap.Convertor().translate(pointArr, 1, 5, translatecallback)
     console.log("5");
 }
+/*
+<div class="item button-pulse" id='photolibrarybut' style="--bg-color: #e67e22;">
+            <div class="button__wrapper">
+                <div class="pulsing"></div>
+                <button onclick="createXml('photolibrary')">本地相册</button>
+            </div>
+        </div>
+        <div class='info'>
+            <p>模式说明：</p>
+            <p class='item'>生产量预估：</p>
+            <p class='description'>区域内农作物产量估计</p>
+            <p class='item'>品种鉴别　：</p>
+            <p class='description'>农作物品种识别，如先玉335</p>
+            <p class='item'>密度值检测：</p>
+            <p class='description'>农作物的存活率检测</p>
+            <p class='item'>覆盖度检测：</p>
+            <p class='description'>农作物营养状况检测</p>
+            <p class='item'>病虫害检测：</p>
+            <p class='description'>农作物病虫害检测，如玉米锈病</p>
+        </div>
+        */
