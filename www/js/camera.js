@@ -17,77 +17,110 @@ var crop_data = [
     },
 
     {
-        id: 'cotton',
+        id: 'weightlifting',
         desc: '举重'
     }
 
 ];
+/*
 var crop_data_part = [
 
     {
         id: "maize",
-        desc: '玉米'
+        desc: '健身操'
     },
 
     {
         id: 'wheat',
-        desc: '小麦'
+        desc: '跑步'
     }
 
-];
+];*/
 var pattern_data = [
 
     {
-        id: "density",
-        desc: '密度值检测'
+        id: "1_run",
+        desc: '起跑'
     },
 
     {
-        id: "overlap",
-        desc: '覆盖度检测'
+        id: "2_run",
+        desc: '摆臂'
     },
 
     {
-        id: "counting",
-        desc: '生产量预估'
+        id: "3_run",
+        desc: '迈腿'
+    },
+    {
+        id: "1_badminton",
+        desc: '挥拍'
     },
 
     {
-        id: "pest",
-        desc: '病虫害检测'
+        id: "2_badminton",
+        desc: '脚步移动'
     },
-
     {
-        id: "identification",
-        desc: '品种鉴别'
+        id: "1_jianshen",
+        desc: '毽子操'
+    },
+    {
+        id: "2_jianshen",
+        desc: '拉伸'
+    },
+    {
+        id: "1_weightlifting",
+        desc: '挺举'
+    },
+    {
+        id: "2_weightlifting",
+        desc: '抓举'
+    },
+    {
+        id: "zero",
+        desc: ''
     }
 ];
 var pattern_data_part = [
-
     {
-        id: "density",
-        desc: '密度值检测'
+        id: "2_run",
+        desc: '短跑'
     },
-
     {
-        id: "overlap",
-        desc: '覆盖度检测'
-    },
-
-    {
-        id: "counting",
-        desc: '生产量预估'
+        id: "3_run",
+        desc: '长跑'
     }
 ];
 var pattern_data_rice = [
     {
-        id: "density",
-        desc: '密度值检测'
+        id: "1_badminton",
+        desc: '挥拍'
     },
 
     {
-        id: "overlap",
-        desc: '覆盖度检测'
+        id: "2_badminton",
+        desc: '脚步移动'
+    }
+]
+var pattern_data_maize = [
+    {
+        id: "1_jianshen",
+        desc: '毽子操'
+    },
+    {
+        id: "2_jianshen",
+        desc: '拉伸'
+    }
+]
+var pattern_data_weightlifting = [
+    {
+        id: "1_weightlifting",
+        desc: '挺举'
+    },
+    {
+        id: "2_weightlifting",
+        desc: '抓举'
     }
 ]
 var pattern_data_zero = [
@@ -96,7 +129,6 @@ var pattern_data_zero = [
         desc: ''
     }
 ]
-
 //input
 $(document).ready(function () {
     $('#selectCrop').selectPage({
@@ -111,31 +143,16 @@ $(document).ready(function () {
         //关闭分页的状态下，列表显示的项目个数，其它的项目以滚动条滚动方式展现（默认10个）
         listSize: 15,
         multiple: false,
-        
         eOpen: function (self) {
             var pattern = document.getElementById('selectPattern').value;
-
-            if (pattern == "identification" || pattern == "pest") {
-                $('#selectCrop').selectPageData([{
-                    id: "maize",
-                    desc: '玉米'
-                }]);
-            }
-            else if(pattern == "counting"){
-                $('#selectCrop').selectPageData(crop_data_part);
-            }
-            else  {
-                $('#selectCrop').selectPageData(crop_data);
-            }
+            $('#selectCrop').selectPageData(crop_data);
         },
         eClear: function (data) {
             $('#selectCrop').selectPageData(crop_data);
             $('#selectPattern').selectPageData(pattern_data);
         }
-        
 
     });
-    
     $('#selectPattern').selectPage({
 
         showField: 'desc',
@@ -150,43 +167,55 @@ $(document).ready(function () {
         multiple: false,
         eOpen: function (data) {
             var crop = document.getElementById('selectCrop').value;
-            if(crop==""){
-                alert("请先选择动作");
+            if (crop==""){
+                alert("请选择运动");
                 $('#selectPattern').selectPageData(pattern_data_zero);
             }
             else{
                 if(crop == "wheat"){
                     $('#selectPattern').selectPageData(pattern_data_part);
                 }
-                else if(crop=="rice" || crop == "cotton"){
+                else if(crop=="rice"){
                     $('#selectPattern').selectPageData(pattern_data_rice);
                 }
-                else{
-                    $('#selectPattern').selectPageData(pattern_data);
+                else if(crop=="maize"){
+                    $('#selectPattern').selectPageData(pattern_data_maize);
+                }
+                else if(crop=="weightlifting"){
+                    $('#selectPattern').selectPageData(pattern_data_weightlifting);
                 }
             }
-            
         },
         eClear: function (data) {
             $('#selectCrop').selectPageData(crop_data);
             $('#selectPattern').selectPageData(pattern_data);
         }
     });
-    
+
     /* $("button").click(function(){
         alert($(this).css("background-color"))
     }) */
 })
-//xml生成
+
+function toret(){
+    var crop = document.getElementById('selectCrop').value;
+    var pattern = document.getElementById('selectPattern').value;
+    if(crop && pattern){
+        window.location.href='show.html'//'URL?id=11'
+    }else{
+        alert("请选择运动和动作");
+    }
+    
+} 
+/*
 var xmlDom;
 var nexthref = "camera_show.html?";
-
 
 function createXml(select) {
     var crop = document.getElementById('selectCrop').value;
     var pattern = document.getElementById('selectPattern').value;
     if (!crop || !pattern)
-        alert("请选择作物或模式");
+        alert("请选择运动和动作");
     else {
         nexthref = nexthref + crop + "&" + pattern;
         cameraTakePicture(select);
@@ -258,25 +287,4 @@ function exchange(centerPointer, callback) {
     }
     new BMap.Convertor().translate(pointArr, 1, 5, translatecallback)
     console.log("5");
-}
-/*
-<div class="item button-pulse" id='photolibrarybut' style="--bg-color: #e67e22;">
-            <div class="button__wrapper">
-                <div class="pulsing"></div>
-                <button onclick="createXml('photolibrary')">本地相册</button>
-            </div>
-        </div>
-        <div class='info'>
-            <p>模式说明：</p>
-            <p class='item'>生产量预估：</p>
-            <p class='description'>区域内农作物产量估计</p>
-            <p class='item'>品种鉴别　：</p>
-            <p class='description'>农作物品种识别，如先玉335</p>
-            <p class='item'>密度值检测：</p>
-            <p class='description'>农作物的存活率检测</p>
-            <p class='item'>覆盖度检测：</p>
-            <p class='description'>农作物营养状况检测</p>
-            <p class='item'>病虫害检测：</p>
-            <p class='description'>农作物病虫害检测，如玉米锈病</p>
-        </div>
-        */
+}*/
