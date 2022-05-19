@@ -1,0 +1,235 @@
+.show{
+    height:30%;
+    width:100%;
+    overflow: hidden;
+    position:relative;
+    margin-top:0;
+    margin-left:0;
+}
+
+.show ul {
+    width: 400%;
+    height: 100%;
+    animation: picmove 10s linear infinite forwards;
+    margin-top:0;
+    margin-left:0;
+}
+
+.show li{
+    margin-top:0;
+    float:left;
+    width:calc(25%);
+    height:100%;
+    margin-left:0;
+} 
+.show li img{
+    margin-top:0;
+    float:left;
+    width:100%;
+    height:100%;
+    margin-left:0;
+}
+@keyframes picmove {
+    from {
+        transform: translate(-3%);
+    }
+    to {
+        transform: translate(-75%);
+    }
+}
+
+.show ul:hover {
+    animation-play-state: paused;
+}
+
+.crop_img{
+    margin-top:5%;
+    height:auto;
+    width:100%;
+    float:left;
+}
+input{
+    float:left;
+}
+.crop_img img{ 
+    margin-left:8%;
+    width:15%;
+    float:left;
+}
+
+.select {
+    height: 60%;
+    position: relative;
+    overflow:hidden;
+    left:0%
+}
+
+.crop {
+    top: 25%;
+    position: absolute;
+    /* right: 15%; */
+    left:10%;
+}
+
+.pattern {
+    top: 40%;
+    position: absolute;
+    /* right: 15%; */
+    left:10%;
+}
+.title1{
+    position: absolute;
+    width:100%;
+    top:37%;
+    left:5%;
+}
+.title1 p{
+    font-size:20px;
+    line-height:5px;
+    margin-bottom:0%;
+    color:rgb(0, 0, 0);
+}
+.point1{
+    position: absolute;
+    width:100%;
+    top:40.5%;
+    left:6%;
+}
+.point1 p{
+    font-size:25px;
+    line-height:5px;
+    margin-bottom:0%;
+    color:rgb(0, 0, 0);
+}
+.info1{
+    position: absolute;
+    width:100%;
+    top:42%;
+    left:11%;
+}
+.info1 p{
+    font-size:12px;
+    line-height:5px;
+    margin-bottom:0%;
+    color:rgb(100, 100, 100);
+}
+.point2{
+    position: absolute;
+    width:100%;
+    top:43.5%;
+    left:6%;
+}
+.point2 p{
+    font-size:25px;
+    line-height:5px;
+    margin-bottom:0%;
+    color:rgb(0, 0, 0);
+}
+.info2{
+    position: absolute;
+    width:100%;
+    top:45%;
+    left:11%;
+}
+.info2 p{
+    font-size:12px;
+    line-height:5px;
+    margin-bottom:0%;
+    color:rgb(100, 100, 100);
+}
+.point3{
+    position: absolute;
+    width:100%;
+    top:46.5%;
+    left:6%;
+}
+.point3 p{
+    font-size:25px;
+    line-height:5px;
+    margin-bottom:0%;
+    color:rgb(0, 0, 0);
+}
+.info3{
+    position: absolute;
+    width:100%;
+    top:48%;
+    left:11%;
+}
+.info3 p{
+    font-size:12px;
+    line-height:5px;
+    margin-bottom:0%;
+    color:rgb(100, 100, 100);
+}
+.info31{
+    position: absolute;
+    width:100%;
+    top:51%;
+    left:8%;
+}
+.info31 p{
+    font-size:12px;
+    line-height:5px;
+    margin-bottom:0%;
+    color:rgb(100, 100, 100);
+}
+.title2{
+    position: absolute;
+    width:100%;
+    top:55%;
+    left:5%;
+}
+.title2 p{
+    font-size:20px;
+    line-height:5px;
+    margin-bottom:0%;
+    color:rgb(0, 0, 0);
+}
+.point4{
+    position: absolute;
+    width:100%;
+    top:58.5%;
+    left:6%;
+}
+.point4 p{
+    font-size:25px;
+    line-height:5px;
+    margin-bottom:0%;
+    color:rgb(100, 100, 100);
+}
+.info4{
+    position: absolute;
+    width:100%;
+    top:60%;
+    left:11%;
+}
+.info4 p{
+    font-size:12px;
+    line-height:5px;
+    margin-bottom:0%;
+    color:rgb(100, 100, 100);
+}
+.point5{
+    position: absolute;
+    width:100%;
+    top:61.5%;
+    left:6%;
+}
+.point5 p{
+    font-size:25px;
+    line-height:5px;
+    margin-bottom:0%;
+    color:rgb(0, 0, 0);
+}
+.info5{
+    position: absolute;
+    width:100%;
+    top:63%;
+    left:11%;
+}
+.info5 p{
+    font-size:12px;
+    line-height:5px;
+    margin-bottom:0%;
+    color:rgb(100, 100, 100);
+}
