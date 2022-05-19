@@ -207,6 +207,16 @@ function toret(){
     }
     
 } 
+function topra(){
+    var crop = document.getElementById('selectCrop').value;
+    var pattern = document.getElementById('selectPattern').value;
+    if(crop && pattern){
+        window.location.href='practice.html'//'URL?id=11'
+    }else{
+        alert("请选择运动和动作");
+    }
+    
+} 
 /*
 var xmlDom;
 var nexthref = "camera_show.html?";

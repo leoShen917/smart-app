@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<haed>
+    <link rel="stylesheet" href="css/common.css" type="text/css">
+    <link rel="stylesheet" href="css/button.css" type="text/css">
+    <link rel="stylesheet" href="css/practice.css" type="text/css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/history.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    
+</haed>
+
+<body>
+    <div class='top'><b>跟练模式</div>
+    <div class='show'>
+        <video style="height:auto;" src="img/liugenghong.mp4" id="video0" controls="controls" width="100%"></video>
+    </div>
+    <div class="item button-pulse" id="uploadbut" style="--bg-color: rgb(173, 173, 173);">
+        <div class="button__wrapper">
+            <div class="pulsing"></div>
+            <button onclick="toret()">本地上传</button>
+        </div>
+    </div>
+    <div class="item button-pulse" id="picloadbut" style="--bg-color: rgb(173, 173, 173);">
+        <div class="button__wrapper">
+            <div class="pulsing"></div>
+            <button onclick="toret()">视频录制</button>
+        </div>
+    </div>
+</body>
