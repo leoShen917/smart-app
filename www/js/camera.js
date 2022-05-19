@@ -17,7 +17,7 @@ var crop_data = [
     },
 
     {
-        id: 'cotton',
+        id: 'weightlifting',
         desc: '举重'
     }
 
@@ -26,12 +26,12 @@ var crop_data_part = [
 
     {
         id: "maize",
-        desc: '玉米'
+        desc: '健身操'
     },
 
     {
         id: 'wheat',
-        desc: '小麦'
+        desc: '跑步'
     }
 
 ];
@@ -110,7 +110,7 @@ $(document).ready(function () {
             if (pattern == "identification" || pattern == "pest") {
                 $('#selectCrop').selectPageData([{
                     id: "maize",
-                    desc: '玉米'
+                    desc: '健身操'
                 }]);
             }
             else if(pattern == "counting"){
@@ -144,7 +144,7 @@ $(document).ready(function () {
             if(crop == "wheat"){
                 $('#selectPattern').selectPageData(pattern_data_part);
             }
-            else if(crop=="rice" || crop == "cotton"){
+            else if(crop=="rice" || crop == "weightlifting"){
                 $('#selectPattern').selectPageData(pattern_data_rice);
             }
             else{

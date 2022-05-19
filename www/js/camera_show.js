@@ -24,10 +24,10 @@ function show_info(crop, task) {
   var ch_task;
   switch (crop) {
     case "maize":
-      ch_crop = "玉米";
+      ch_crop = "健身操";
       break;
-    case "wheat":
-      ch_crop = "小麦";
+    case "wheet":
+      ch_crop = "跑步";
       break;
     case "rice":
       ch_crop = "水稻";

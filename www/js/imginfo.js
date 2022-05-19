@@ -21,15 +21,15 @@ function getURL() {
                 console.log(xmlDom.find("cropinfo").text() + "   " + xmlDom.find("taskinfo").text())
                 switch (xmlDom.find("cropinfo").text()) {
                     case "maize":
-                        crop = "玉米";
+                        crop = "健身操";
                         break;
                     case "wheat":
-                        crop = "小麦";
+                        crop = "跑步";
                         break;
                     case "rice":
                         crop = "水稻";
                         break;
-                    case "cotton":
+                    case "weightlifting":
                         crop = "棉花";
                         break;
                 }
