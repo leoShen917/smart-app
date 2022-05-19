@@ -15,7 +15,20 @@
     <div class='show'>
 
         <video style="height:auto;" src="" id="video0" controls="controls" width="100%"></video>
-        <input class="form-control" type="file" style="height:auto;" id="video" name="video" />
+
+        <!-- <input class="uploadvedio" type="file" style="height:auto;" id="video" name="video" /> -->
+        <div style="text-align:center; vertical-align:middel;">
+            <a href="javascript:;" class="file">选择文件 
+                <input type="file" name='video' id='video'> 
+            </a>
+        </div>
+            <!-- <input class="file" type='file' name='video' id='video' /> -->
+        <div style="text-align:center; vertical-align:middel;">
+            <button class="confirm" style="width: 90px; height: 30px;font-size: 20px;   " type="submit" name="submit" onclick="upvideo_confirm()"/>上传</button>
+        </div>
+        <div style="text-align:center; vertical-align:middel;">
+            <button class="confirm" style="width: 120px; height: 60px;font-size: 20px;   " type="submit" name="submit" onclick="toret()"/>结果查看</button>
+        </div>
         <!-- <div class="button__wrapper">
             <div class="pulsing"></div>
             <button onclick="createXml('photolibrary')">上传跟练视频</button>
@@ -33,6 +46,7 @@
 </html>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
 <script>
+    var upcheck;
     // hTML5实现表单内的上传文件框，上传前预览视频，刷新预览video，使用HTML5 的File API,
     // 建立一个可存取到该file的url，一个空的video标签，ID为video0,把选择的文件显示在video标签中，实现视频预览功能。
     // 需要选择支持HTML API的浏览器。
@@ -55,4 +69,43 @@
         }
         return url;
     }
+
+    $( ".file" ).on( "change" , "input[type='file']" , function (){
+     var  filePath=$( this ).val();
+     if (filePath.indexOf( "mp4" )!=-1 || filePath.indexOf( "png" )!=-1){
+         //修改允许类型
+         $( ".fileerrorTip1" ).html( "" ).hide();
+         var  arr=filePath.split( '\\' );
+         var  fileName=arr[arr.length-1];
+         $( ".showFileName1" ).html(fileName);
+         upcheck=true;
+     } else {
+         $( ".showFileName1" ).html( "" );
+         $( ".fileerrorTip1" ).html( "您未上传文件，或者您上传文件类型有误！" ).show();
+         upcheck=false;
+         return  false
+     }
+})
+
+</script>
+<script type="text/javascript">
+    function upvideo_confirm(){
+        // 这里加入视频上传控制，成功和失败反馈
+        if(upcheck==true){
+            alert("上传成功！");
+        }else{
+            alert("未选择视频或类型有误，上传失败！");
+        }
+        
+        //window.location.href='result_compare.html'//'URL?id=11'
+    }    
+    function toret(){
+        // 这里加入视频上传控制，成功和失败反馈
+        if(upcheck==true){
+            window.location.href='result_compare.html'//'URL?id=11'
+        }else{
+            alert("视频未上传成功，无法进行结果查看");
+        }
+        
+    } 
 </script>
