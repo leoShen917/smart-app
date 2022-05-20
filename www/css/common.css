@@ -31,6 +31,85 @@
     top:  -120px;
     left: -160px;
 }
+
+.header{
+/* header */
+position: absolute;
+left: 0px;
+top: 0px;
+width: 428px;
+height: 132.02px;
+box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.3);
+}
+.headerbar{
+/* base */
+position: absolute;
+left: 0px;
+top: 0px;
+width: 428px;
+height: 132.02px;
+background: #000000;
+}
+.headertext{
+/* AI教练 */
+position: absolute;
+width: 192px;
+height: 32px;
+top: 50.01px;
+left: 119px;
+
+
+color: rgb(255, 255, 255);
+font-family: YouSheBiaoTiHei;
+font-size: 64px;
+font-weight: 400;
+line-height: 32px;
+letter-spacing: 0px;
+text-align: center;
+}
+.main{
+/* main */
+
+position: absolute;
+left: 0px;
+top: 85.87px;
+width: 428px;
+height: 840.13px;
+background: #000000;
+box-sizing: border-box;
+border: 1px solid #000000;
+box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.3);
+}
+.patternchoose{
+/* 示范模式 */
+position: absolute;
+left: 0px;
+top: 38.56px;
+width: 428px;
+height: 218.75px;
+}
+.patternchoosebutton{
+/* 按钮 */
+position: absolute;
+left: 123.23px;
+top: 78.22px;
+width: 189.23px;
+height: 62.31px;
+}
+.patternchoosetext{
+/* 示范模式文本 */
+position: absolute;
+left: 0px;
+top: 15.15px;
+width: 189px;
+height: 32px;
+font-family: YouSheBiaoTiHei;
+font-size: 36px;
+font-weight: normal;
+line-height: 32px;
+letter-spacing: 0em;
+color: #FFFFFF;
+}
  .bottom {
      height: 10%;
      width: 100%;
