@@ -10,25 +10,27 @@
 </haed>
 
 <body>
-    
-    <div class='top'><b><div style="text-align:center; vertical-align:middel;">结果对比</div>
-        <div class="forreturn"><a href='history.html'><h5>返回上传</h5></a></div>
-    </div>
-    <div class='show'>
-
-        <div style="text-align:center; vertical-align:middel;"><h4>这里显示结果比较图片或者控件</h4></div>
-        <img src="img/background.png" width="100%" />
-        <div style="text-align:center; vertical-align:middel;"><h4>下面是对比视频</h4></div>
-        <video style="height:auto;" src="img/liugenghong.mp4" id="video_cmp" controls="controls" width="100%"></video>
-
-    </div>
-    <div class='bottom'>
-        <div class='container'>
-            <div class='camera'><a href='camera.html'><img id='camera' src='img/camera2.png'></a></div>
-            <div class='home'><a href='home.html'><img id='home' src='img/home_no.png'></a></div>
-            <div class='history'><a href='#'><img id='history' src='img/history.png'></a></div>
+<div id="homedeader" class="header">
+    <div class="hbar"></div>
+    <div class="text">运动评测</div>
+</div>
+<div class="main">
+    <div class="patternchoose" style="background-image: url(/img/wuzi.jpeg); background-size: 100%;">
+        <div type="button" class="patternchoosebutton" onclick="window.location.href='camera.html';">
+            <div class="patternchoosetext">示范模式</div>
         </div>
     </div>
+    <div class="patternchoose" style="background-image: url(/img/wuzi.jpeg); background-size: 100%; top: 35%">
+        <div type="button" class="patternchoosebutton" onclick="window.location.href='camera.html';">
+            <div class="patternchoosetext" >跟练模式</div>
+        </div>
+    </div>
+    <div class="patternchoose" style="background-image: url(/img/wuzi.jpeg); background-size: 100%; top: 65%">
+        <div type="button" class="patternchoosebutton" onclick="window.location.href='history.html';">
+            <div class="patternchoosetext">回放模式</div>
+        </div>
+    </div>
+</div>
 </body>
 
 </html>

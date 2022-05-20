@@ -70,6 +70,20 @@
     top: 92%;
     right:50%;}
     /* transform:translate(-50%) */
+.uploadinputfile{
+    height:8%;
+    width: 50%;
+    position: absolute;
+    float:left;
+    top: 92%;
+    right:50%;
+    /* transform:translate(-50%) */
+}
+.filefont {
+    margin-top: -36px;
+display: block;
+line-height: 34px;
+}
 #picloadbut {
     height:8%;
     width: 50%;
