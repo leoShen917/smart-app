@@ -1,0 +1,166 @@
+.main .compare{
+    /* 左右对比图片或视频容器 */
+    position: absolute;
+    left: 0px;
+    top: 5%;
+    width: 100%;
+    height: 30%;
+    text-align: center;
+    }
+.main .compare .left{
+    /* 左右对比图片或视频容器 */
+    position: absolute;
+    left: 5%;
+    top: 0%;
+    width: 40%;
+    height: 100%;
+    text-align: center;
+    }
+.main .compare .right{
+    /* 左右对比图片或视频容器 */
+    position: absolute;
+    right: 5%;
+    top: 0%;
+    width: 40%;
+    height: 100%;
+    text-align: center;
+    }
+.main .score {
+    /* 运动评分 */
+    position: absolute;
+    right: 0%;
+    top: 35%;
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    }
+.main .score .fixed{
+    /* 运动评分 */
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 40%;
+    height: 100%;
+    text-align: center;
+    font-family: YouSheBiaoTiHei;
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 46px;
+    letter-spacing: 0em;
+    color: #9E9E9E;
+    }
+.main .score .score{
+    /* 运动评分 */
+    position: absolute;
+    left: 40%;
+    top: 0%;
+    width: 60%;
+    height: 100%;
+    text-align: center;
+    font-family: zcool-gdh;
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 46px;
+    letter-spacing: 0em;
+    /* color: lightgreen; */
+    }
+.main .aiadvicefixed{
+    /* ai建议 */
+    position: absolute;
+    left: 5%;
+    top: 42%;
+    width: 100%;
+    height: 10%;
+    text-align: left;
+    font-family: zcool-gdh;
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 46px;
+    letter-spacing: 0em;
+    color: #9E9E9E;
+}
+.main .aiadvice1{
+    /* ai建议1 */
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    font-family: zcool-gdh;
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 32px;
+    letter-spacing: 0em;
+    }
+.main .aiadvice2{
+    /* ai建议2 */
+    position: absolute;
+    left: 0%;
+    top: 58%;
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    font-family: zcool-gdh;
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 32px;
+    letter-spacing: 0em;
+    
+}
+.main .moreguidance{
+    /* ⬇ 更多专业指导 */
+    position: absolute;
+    left: 0%;
+    top: 75%;
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    font-family: YouSheBiaoTiHei;
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 32px;
+    letter-spacing: 0em;
+    color: #9E9E9E;
+}
+.main .bottom2but{
+    /* 下方两个按钮 */
+    position: absolute;
+    left: 0%;
+    top: 82%;
+    width: 100%;
+    height: 18%;
+    background-color: white;
+}
+.main .bottom2but .left{
+    /* 下方左按钮 姿态分析 */
+    position: absolute;
+    left: 0%;
+    top: 5%;
+    width: 49%;
+    height: 95%;
+    background-color: black;
+    text-align: center;
+    font-family: YouSheBiaoTiHei;
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 32px;
+    letter-spacing: 0em;
+    color: #FFFFFF;
+    }
+.main .bottom2but .right{
+    /* 下方右按钮 进步曲线 */
+    position: absolute;
+    right: 0%;
+    top: 5%;
+    width: 49%;
+    height: 95%;
+    background-color: black;
+    text-align: center;
+    font-family: YouSheBiaoTiHei;
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 32px;
+    letter-spacing: 0em;
+    color: #FFFFFF;
+}

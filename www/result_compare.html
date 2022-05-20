@@ -2,35 +2,70 @@
 <html>
 <haed>
     <link rel="stylesheet" href="css/common.css" type="text/css">
-    <link rel="stylesheet" href="css/history.css" type="text/css">
+    <link rel="stylesheet" href="css/result_compare.css" type="text/css">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/history.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
 
 </haed>
+<style>
+    @font-face{
+        font-family: "YouSheBiaoTiHei";
+        src:url("font/YouSheBiaoTiHei.ttf")
+    }
+    @font-face{
+        font-family: "zcool-gdh";
+        src:url("font/ZhanKuGaoDuanHei.ttf")
+    }
+</style>
 
-<body>
+<body onload="load_retcmp()">
 <div id="homedeader" class="header">
     <div class="hbar"></div>
     <div class="text">运动评测</div>
 </div>
 <div class="main">
-    <div class="patternchoose" style="background-image: url(/img/wuzi.jpeg); background-size: 100%;">
-        <div type="button" class="patternchoosebutton" onclick="window.location.href='camera.html';">
-            <div class="patternchoosetext">示范模式</div>
-        </div>
-    </div>
-    <div class="patternchoose" style="background-image: url(/img/wuzi.jpeg); background-size: 100%; top: 35%">
-        <div type="button" class="patternchoosebutton" onclick="window.location.href='camera.html';">
-            <div class="patternchoosetext" >跟练模式</div>
-        </div>
-    </div>
-    <div class="patternchoose" style="background-image: url(/img/wuzi.jpeg); background-size: 100%; top: 65%">
-        <div type="button" class="patternchoosebutton" onclick="window.location.href='history.html';">
-            <div class="patternchoosetext">回放模式</div>
-        </div>
-    </div>
+<div class="compare">
+    <div class="left"><img src="img/3_left.png" width="100%" height="100%" />  </div>
+    <div class="right"><img src="img/3_right.png" width="100%" height="100%" />  </div>
+</div>
+
+<div class="score">
+    <div class="fixed">运动评分</div>
+    <div class="score"><span  id="show_score"></span></div>
+</div>
+
+<div class="aiadvicefixed">AI建议:</div>
+<div class="aiadvice1"><span id="aiadvice1" style="color: #1873BE;"></span></div>
+<div class="aiadvice2"><span id="aiadvice2" style="color: #1873BE;"></span></div>
+
+<div class="moreguidance">⬇ 更多专业指导</div>
+
+<div class="bottom2but">
+    <button class="left">姿态分析</button>
+    <button class="right">进步曲线</button>
+</div>
 </div>
 </body>
 
 </html>
+<script>
+    var ret_score=84;
+    var aiadvice1="· 腰部需要挺直";
+    var aiadvice2="· 大腿仍需抬高";
+    function load_retcmp(){
+        if (ret_score>=90){
+            show_score=document.getElementById("show_score");
+            show_score.innerHTML=ret_score+' '+'非常优秀';
+            document.getElementById("show_score").style.color = "lightgreen";
+        }else if(ret_score>=80 & ret_score<90){
+            show_score=document.getElementById("show_score");
+            show_score.innerHTML=ret_score+' '+'有待改进';
+            document.getElementById("show_score").style.color = "lightsalmon";
+        }
+        show_aiadvice1=document.getElementById("aiadvice1");
+        show_aiadvice1.innerHTML=aiadvice1;
+        show_aiadvice2=document.getElementById("aiadvice2");
+        show_aiadvice2.innerHTML=aiadvice2;
+    }
+</script>
