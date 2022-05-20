@@ -10,7 +10,32 @@
     <script type="text/javascript" src="js/upvideo_test.js"></script>
     
 </haed>
-
+<script>
+    function upvideochange(this){
+        var objUrl = getObjectURL(this.files[0]);
+        console.log("objUrl = " + objUrl);
+        if (objUrl) {
+            $("#video2up").attr("src", objUrl);
+        }
+        var  filePath=$( this ).val();
+        if (filePath.indexOf( "mp4" )!=-1 || filePath.indexOf( "png" )!=-1){
+            //修改允许类型
+            $( ".fileerrorTip1" ).html( "" ).hide();
+            var  arr=filePath.split( '\\' );
+            var  fileName=arr[arr.length-1];
+            $( ".showFileName1" ).html(fileName);
+            alert("上传成功！关闭后跳转")
+            window.location.href='result_compare.html'
+            upcheck=true;
+        } else {
+            $( ".showFileName1" ).html( "" );
+            $( ".fileerrorTip1" ).html( "您未上传文件，或者您上传文件类型有误！" ).show();
+            upcheck=false;
+            alert("未选择视频或类型有误，上传失败！")
+            upcheck=false;
+        }
+    }
+</script>
 <body>
     <div class='top'><b>跟练模式</div>
     <div class='show'>
@@ -18,13 +43,13 @@
     </div>
 
     <!-- 预览视频，检测用 -->
-    <!-- <h3>预览视频，检测用</h3>
-    <video style="height:auto;" src="" id="video2up" controls="controls" width="100%"></video> -->
+    <h3>预览视频，检测用</h3>
+    <video style="height:auto;" src="" id="video2up" controls="controls" width="100%"></video> 
 
     <div class="item button-pulse" id="uploadbut" style="--bg-color: rgb(173, 173, 173);">
         <div class="button__wrapper">
             <div class="pulsing"></div>
-            <input type="file" style="height:100%;width: 100%;position: absolute;display: none;" name='video' id='upvideo' onchange="upvideochange()"/>
+            <input type="file" style="height:100%;width: 100%;position: absolute;display: none;" name='video' id='upvideo' onchange="upvideochange(this)"/>
             <button>
             <label for="upvideo" >
                 <span>本地上传</span>
@@ -86,5 +111,5 @@
         }
         return url;
     }
-
+    
 </script>
