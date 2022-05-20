@@ -54,10 +54,10 @@ background: #000000;
 .header .text{
 /* AI教练 */
 position: absolute;
-width: 60%;
+width: 80%;
 height: 50%;
 top: 30%;
-left: 20%;
+left: 10%;
 
 
 color: rgb(255, 255, 255);
