@@ -43,15 +43,16 @@
     left:50%;
     transform:translate(-50%)
 } */
+
 #camerabut  {
     height:12%;
     width: 25%;
     position: absolute;
     float:left;
     top: 57%;
-    right:57%;
+    right:57%;}
     /* transform:translate(-50%) */
-}
+
 
 #photolibrarybut {
     height:12%;
@@ -59,10 +60,24 @@
     position: absolute;
     float:left;
     top: 57%;
-    right:17%;
+    right:17%;}
     /* transform:translate(-50%) */
-}
-
+#uploadbut {
+    height:8%;
+    width: 50%;
+    position: absolute;
+    float:left;
+    top: 92%;
+    right:50%;}
+    /* transform:translate(-50%) */
+#picloadbut {
+    height:8%;
+    width: 50%;
+    position: absolute;
+    float:left;
+    top: 92%;
+    right:0%;}
+    /* transform:translate(-50%) */
 .select button {
     cursor: pointer;
     background-color: rgb(76, 76, 80) !important;

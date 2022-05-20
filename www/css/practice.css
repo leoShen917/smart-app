@@ -1,0 +1,79 @@
+.show{
+    height:30%;
+    width:100%;
+    overflow: hidden;
+    position:relative;
+    margin-top:0;
+    margin-left:0;
+}
+
+.show ul {
+    width: 400%;
+    height: 100%;
+    animation: picmove 10s linear infinite forwards;
+    margin-top:0;
+    margin-left:0;
+}
+
+.show li{
+    margin-top:0;
+    float:left;
+    width:calc(25%);
+    height:100%;
+    margin-left:0;
+} 
+.show li img{
+    margin-top:0;
+    float:left;
+    width:100%;
+    height:100%;
+    margin-left:0;
+}
+@keyframes picmove {
+    from {
+        transform: translate(-3%);
+    }
+    to {
+        transform: translate(-75%);
+    }
+}
+
+.show ul:hover {
+    animation-play-state: paused;
+}
+
+.crop_img{
+    margin-top:5%;
+    height:auto;
+    width:100%;
+    float:left;
+}
+input{
+    float:left;
+}
+.crop_img img{ 
+    margin-left:8%;
+    width:15%;
+    float:left;
+}
+
+.select {
+    height: 60%;
+    position: relative;
+    overflow:hidden;
+    left:0%
+}
+
+.crop {
+    top: 25%;
+    position: absolute;
+    /* right: 15%; */
+    left:10%;
+}
+
+.pattern {
+    top: 40%;
+    position: absolute;
+    /* right: 15%; */
+    left:10%;
+}
